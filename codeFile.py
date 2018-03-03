@@ -1,8 +1,9 @@
-soursce = "This is the string to code! А это просто так, тексты, с буквой Ы"
+file = open("textToCode.txt")
+soursce = file.read()
 result = ""
 
 alphabet = "abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZабвгдеёжзиклмнопрстуфхцчшщьъыэюяАБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ"
-alphabet2 = "ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyzАБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЬЪЫЭЮЯабвгдеёжзиклмнопрстуфхцчшщьыъэюя"
+alphabet2 = "IпtЖTGRkдчecШМУlxwХцлсOщЬДQИЧГmЕгЁSэMbCоKXеDкжЫхьPыЭЯъuLgWHЗтФфpуiНОdВвКYNшАyяZаЛТбzhнЩEрrюBБoмСиЦЪAЮVзРqПaёnfvUsF"
 
 
 def code(charS):
@@ -19,4 +20,9 @@ for charSource in soursce:
 
 print (soursce)
 print (result)
+
+file.close()
+file = open("ResultOfCode.txt", 'w')
+file.write(result)
+file.close()
 
