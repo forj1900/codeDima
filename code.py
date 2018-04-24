@@ -6,6 +6,11 @@ alphabet2 = "ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyzАБВГДЕЁ�
 
 
 def code(charS):
+	pos = alphabet.find(charS)
+	if pos >= 0: 
+		return alphabet2[pos]
+	return charS
+	'''
 	count = 0
 	for c in alphabet:
 		if c == charS:
@@ -13,6 +18,7 @@ def code(charS):
 		count += 1
 
 	return charS
+	'''
 
 for charSource in soursce:
 	result = result + code(charSource)
